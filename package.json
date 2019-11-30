@@ -1,0 +1,21 @@
+{
+  "name": "sketches",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sketch.js",
+  "scripts": {
+    "start": "canvas-sketch src/sketch.js --hot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "canvas-sketch-cli": "1.11.7",
+    "eslint": "6.7.1",
+    "eslint-config-standard": "14.1.0"
+  },
+  "dependencies": {
+    "canvas-sketch": "0.7.1"
+  }
+}
