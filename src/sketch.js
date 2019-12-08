@@ -26,6 +26,9 @@ const sketch = ({ context }) => {
   // Setup a camera
   const camera = new THREE.OrthographicCamera()
 
+  // Setup camera controller
+  const controls = new THREE.OrbitControls(camera, context.canvas)
+
   // Setup your scene
   const scene = new THREE.Scene()
 
@@ -59,7 +62,7 @@ const sketch = ({ context }) => {
 
   const light = new THREE.DirectionalLight('white', 1)
   light.position.set(
-    0, 1, 0
+    0, 1, 0.1
   )
   scene.add(light)
   scene.add(new THREE.AmbientLight('#121'))
@@ -98,10 +101,12 @@ const sketch = ({ context }) => {
       // mesh.rotation.y = time * 0.09
       // mesh.rotation.x = time * 0.07
       renderer.render(scene, camera)
+      controls.update()
     },
     // Dispose of events & renderer for cleaner hot-reloading
     unload () {
       renderer.dispose()
+      controls.dispose()
     }
   }
 }
