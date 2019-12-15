@@ -4,7 +4,7 @@
   "description": "",
   "main": "sketch.js",
   "scripts": {
-    "start": "canvas-sketch src/sketch.js --hot",
+    "start": "canvas-sketch src/sketch.js --hot --output=tmp/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,8 +20,10 @@
     "eslint-plugin-standard": "4.0.1"
   },
   "dependencies": {
+    "bezier-easing": "2.1.0",
     "canvas-sketch": "0.7.1",
     "canvas-sketch-util": "1.10.0",
+    "eases": "1.0.8",
     "nice-color-palettes": "3.0.0",
     "three": "0.111.0"
   }
