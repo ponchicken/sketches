@@ -2,13 +2,13 @@ const canvasSketch = require('canvas-sketch')
 const createShader = require('canvas-sketch-util/shader')
 const glsl = require('glslify')
 
-// Setup our sketch
+// Setup sketch
 const settings = {
   context: 'webgl',
   animate: true
 }
 
-// Your glsl code
+// glsl code
 const frag = glsl`
   precision highp float;
 
@@ -21,7 +21,7 @@ const frag = glsl`
   }
 `
 
-// Your sketch, which simply returns the shader
+// sketch, which simply returns the shader
 const sketch = ({ gl }) => {
   // Create the shader and return it
   return createShader({

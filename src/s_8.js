@@ -23,7 +23,7 @@ const frag = glsl`
     float dist = length(center);
     float alpha = smoothstep(0.25, 0.23, dist);
 
-    float n = snoise3(vec3(center * 0.3, time * 1.0));
+    float n = snoise3(vec3(center * 5.0, time * 1.0));
     vec3 color = hsl2rgb(
       0.1 + n * 0.2,
       0.8,
